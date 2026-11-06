@@ -383,7 +383,7 @@ window.CONTENT = {
     "columns": [
       "比較すること",
       "当院 熱破壊式",
-      "他院 蓄熱式"
+      "蓄熱式"
     ],
     "rows": [
       {
@@ -455,11 +455,11 @@ window.CONTENT = {
         "name": "全身脱毛",
         "subtitle": "顔・VIO・首（前面）除く",
         "popularBadge": "人気No.1",
-        "sessions": "5回コース（+1回）",
+        "sessions": "5回コース",
         "originalPrice": "223,300",
-        "campaignPrice": "132,000",
+        "campaignPrice": "88,000",
         "taxLabel": "（税込）",
-        "monthlyPrice": "30,800",
+        "monthlyPrice": "18,700",
         "features": [
           "両ワキ、両ヒジ上、両ヒジ下、手の指・甲",
           "膝上、膝、膝下、足の指・甲",
@@ -471,11 +471,11 @@ window.CONTENT = {
       {
         "name": "全身+VIO脱毛プラン",
         "subtitle": "首（前面）除く",
-        "sessions": "５回コース（+1回）",
+        "sessions": "５回コース",
         "originalPrice": "296,450",
-        "campaignPrice": "179,520",
+        "campaignPrice": "126,500",
         "taxLabel": "（税込）",
-        "monthlyPrice": "41,800",
+        "monthlyPrice": "26,400",
         "features": [
           "両ワキ、両ヒジ上、両ヒジ下、手の指・甲",
           "うなじ、背中（上・下）、お尻、胸、腹",
@@ -488,11 +488,11 @@ window.CONTENT = {
       {
         "name": "全身パーフェクト脱毛",
         "subtitle": "顔・VIO含む全部位/首（前面）除く",
-        "sessions": "5回コース（+1回）",
+        "sessions": "5回コース",
         "originalPrice": "365,200",
-        "campaignPrice": "227,920",
+        "campaignPrice": "165,000",
         "taxLabel": "（税込）",
-        "monthlyPrice": "48,400",
+        "monthlyPrice": "35,200",
         "features": [
           "額、頬、鼻、鼻下、あご",
           "両ワキ、両ヒジ上、両ヒジ下、手の指・甲",
@@ -633,7 +633,7 @@ window.CONTENT = {
       "hours": {
         "weekday": "平日10:00 - 19:00",
         "weekend": "土日祝10:00 - 19:00",
-        "closed": "水曜日"
+        "closed": "金曜日"
       },
       "mapIframeUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d830.9368991320373!2d130.3962550285006!3d33.58590211554397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541910f4cf05549%3A0x6c6b85532013ca9a!2z44O044Kh44O844K444Oz44Kv44Oq44OL44OD44Kv56aP5bKh5aSp56We6Zmi!5e0!3m2!1sja!2sjp!4v1775193598185!5m2!1sja!2sjp",
       "mapPageUrl": "https://www.google.com/maps/place/%E3%83%B4%E3%82%A1%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E%E9%99%A2/@33.5859021,130.396255,19z/data=!3m2!4b1!5s0x3541918447392345:0xa0f51adeda3890fe!4m6!3m5!1s0x3541910f4cf05549:0x6c6b85532013ca9a!8m2!3d33.585901!4d130.3969001!16s%2Fg%2F11htm1d_ds?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D",
