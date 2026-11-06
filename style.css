@@ -1080,3 +1080,24 @@ body { background: #ece6e7; color: var(--ink); }
 @media(max-width:350px){#campaign .headline>span{font-size:26px}#campaign .headline>strong{font-size:20px}.campaign-plan{padding:19px!important}.campaign-money b{font-size:46px!important}.skin-manifesto{margin-inline:-20px}.skin-manifesto img{height:285px}.skin-manifesto>p{left:17px;font-size:23px}.skin-manifesto strong{font-size:36px}.care-intro{font-size:24px}.zero-editorial{grid-template-columns:minmax(0,1fr) 60px;gap:8px}.zero-editorial h2>span{font-size:21px}.zero-editorial h2 strong b{font-size:136px}.zero-editorial>p{font-size:14px}.zero-grid{padding-inline:9px}.zero-grid article{gap:5px;padding-inline:5px}.zero-grid h3{font-size:12px}.review-slide{padding:16px;gap:8px}.review-slide h3{font-size:18px}.review-slide .star-score strong{font-size:42px}.course-spread header h3{font-size:21px}.course-spread .course-hero-price b{font-size:43px}.course-inclusions>div{grid-template-columns:1fr}.course-spread .course-inclusions .coverage-photo img{height:150px}.clinic-reason-notes article,.clinic-reason-notes article:nth-child(2){grid-template-columns:90px minmax(0,1fr);gap:10px}.clinic-reason-notes article:nth-child(2){grid-template-columns:minmax(0,1fr) 90px}.clinic-reason-notes .reason-art{width:90px;height:115px}.clinic-reason-notes h3{font-size:14px}}
 .jump-links a{white-space:nowrap;font-size:10px;padding-inline:3px}
 @media(max-width:350px){.jump-links a{font-size:9px;padding-inline:2px}}
+
+/* 個人情報同意チェックボックス */
+.reservation .privacy-confirm input[type="checkbox"] {
+  appearance: auto;
+  -webkit-appearance: checkbox;
+
+  display: inline-block;
+  width: 15px !important;
+  height: 15px !important;
+
+  min-width: 15px;
+  min-height: 15px;
+  max-width: 15px;
+
+  flex: 0 0 15px;
+  margin: 3px 0 0 !important;
+  padding: 0 !important;
+
+  box-shadow: none;
+  accent-color: #9065a4;
+}
