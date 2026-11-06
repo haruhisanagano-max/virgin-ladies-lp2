@@ -1232,3 +1232,24 @@ body { background: #ece6e7; color: var(--ink); }
   white-space: normal;
   overflow-wrap: anywhere;
 }
+
+
+/* =========================================
+   脱毛経過3ステップを縦並びに修正
+   ========================================= */
+
+/* 3列グリッド内で、各ステップを横幅いっぱいに配置 */
+.source-stats > .progress-spread {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* 各ステップの画像・説明が横にはみ出さないように */
+.source-stats > .progress-spread > figure {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
