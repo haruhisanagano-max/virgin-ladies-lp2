@@ -1081,45 +1081,50 @@ body { background: #ece6e7; color: var(--ink); }
 .jump-links a{white-space:nowrap;font-size:10px;padding-inline:3px}
 @media(max-width:350px){.jump-links a{font-size:9px;padding-inline:2px}}
 
-/* 個人情報同意チェックボックス */
+
+/* =========================================
+   個人情報同意チェックボックス
+   ========================================= */
 .reservation .privacy-confirm input[type="checkbox"] {
   appearance: auto;
   -webkit-appearance: checkbox;
-
   display: inline-block;
   width: 15px !important;
   height: 15px !important;
-
   min-width: 15px;
   min-height: 15px;
   max-width: 15px;
-
   flex: 0 0 15px;
   margin: 3px 0 0 !important;
   padding: 0 !important;
-
   box-shadow: none;
   accent-color: #9065a4;
 }
-
 
 /* =========================================
    スマホ表示の文字欠け・改行修正
    ========================================= */
 
-/* ①「自信のある、素肌へ」の縦書き */
+/* ① 縦書き「自信のある、素肌へ」 */
 .skin-manifesto > p {
-  left: 65px;
+  position: absolute;
+  left: 108px;
+  right: auto;
   top: 30px;
-  height: 235px;
+
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+
   width: max-content;
   max-width: none;
+  height: auto;
+
   white-space: nowrap;
   overflow: visible;
   z-index: 3;
 }
 
-/* ② キャンペーン見出しを1行に */
+/* ② キャンペーン見出しの折り返し防止 */
 #campaign .headline > strong {
   white-space: nowrap;
   text-wrap: nowrap;
@@ -1127,15 +1132,16 @@ body { background: #ece6e7; color: var(--ink); }
   letter-spacing: -0.04em;
 }
 
-/* 狭いスマホでも文字を収める */
-@media (max-width: 350px) {
+/* ③ iPhone SEなど幅375px以下 */
+@media (max-width: 375px) {
   .skin-manifesto > p {
-    left: 60px;
+    left: 100px;
     top: 25px;
+    font-size: 22px;
   }
 
   .skin-manifesto strong {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   #campaign .headline > strong {
