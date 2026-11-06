@@ -1253,3 +1253,35 @@ body { background: #ece6e7; color: var(--ink); }
   margin-left: 0;
   margin-right: 0;
 }
+
+
+/* =========================================
+   iPhone Safari 日付入力欄のはみ出し修正
+   ========================================= */
+
+.reservation #booking-form input[type="date"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  min-height: 45px;
+  line-height: 1.4;
+  padding: 11px;
+
+  border: 1px solid #d6c8df;
+  border-radius: 0;
+  background-color: #fffafd;
+}
+
+/* 日付欄の親要素も幅を制限 */
+.reservation #booking-form label {
+  min-width: 0;
+  max-width: 100%;
+}
