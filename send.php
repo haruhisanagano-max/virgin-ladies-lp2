@@ -13,7 +13,7 @@ header('Referrer-Policy: no-referrer');
 // ========================================
 
 // 送信先・送信元を確認するまで false のまま
-const ENABLE_MAIL = false;
+const ENABLE_MAIL = true;
 
 const FROM_EMAIL = 'reserve-flp@v-clinic.jp';
 
