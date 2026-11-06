@@ -1,11 +1,7 @@
-
 <?php
 declare(strict_types=1);
 
-/*
- * ヴァージンクリニック 女性医療脱毛LP
- * Xserver メール送信処理
- */
+// ヴァージンクリニック 女性医療脱毛LP
 
 header('Content-Type: application/json; charset=UTF-8');
 header('Cache-Control: no-store, private');
