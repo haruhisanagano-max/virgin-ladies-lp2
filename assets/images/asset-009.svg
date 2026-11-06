@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" fill="none">
+  <defs>
+    <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#fffaf8"/><stop offset="1" stop-color="#edeafb"/></linearGradient>
+    <linearGradient id="skin" x2="0" y2="1"><stop stop-color="#eed7df"/><stop offset="1" stop-color="#f8eff2" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="718" height="418" rx="34" fill="url(#paper)" stroke="#fff"/>
+  <path d="M102 149C203 89 361 91 529 149C410 124 242 123 108 161Z" fill="#b18eab" opacity=".36"/>
+  <path d="M111 217C220 141 405 156 543 212C459 209 369 229 293 247C217 263 156 250 111 217Z" fill="url(#skin)"/>
+  <path d="M111 217C220 141 405 156 543 212" stroke="#bc8da9" stroke-width="2" stroke-dasharray="7 8" opacity=".75"/>
+  <path d="M111 217C222 260 397 254 543 212" stroke="#79546e" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M111 217C231 300 424 294 543 212" stroke="#b895af" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M295 184V241M295 245L286 232M295 245L304 232" stroke="#956685" stroke-width="2" stroke-linecap="round"/>
+  <path d="M325 255H569L605 292" stroke="#a37a9c" stroke-width="1.5"/>
+  <circle cx="325" cy="255" r="4" fill="#a37a9c"/>
+  <text x="605" y="325" text-anchor="end" fill="#60435f" font-size="27" font-family="sans-serif">上まぶたの縁</text>
+</svg>
