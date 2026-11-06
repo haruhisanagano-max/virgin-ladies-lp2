@@ -1101,3 +1101,46 @@ body { background: #ece6e7; color: var(--ink); }
   box-shadow: none;
   accent-color: #9065a4;
 }
+
+
+/* =========================================
+   スマホ表示の文字欠け・改行修正
+   ========================================= */
+
+/* ①「自信のある、素肌へ」の縦書き */
+.skin-manifesto > p {
+  left: 65px;
+  top: 30px;
+  height: 235px;
+  width: max-content;
+  max-width: none;
+  white-space: nowrap;
+  overflow: visible;
+  z-index: 3;
+}
+
+/* ② キャンペーン見出しを1行に */
+#campaign .headline > strong {
+  white-space: nowrap;
+  text-wrap: nowrap;
+  font-size: 20px;
+  letter-spacing: -0.04em;
+}
+
+/* 狭いスマホでも文字を収める */
+@media (max-width: 350px) {
+  .skin-manifesto > p {
+    left: 60px;
+    top: 25px;
+  }
+
+  .skin-manifesto strong {
+    font-size: 34px;
+  }
+
+  #campaign .headline > strong {
+    font-size: 18px;
+    letter-spacing: -0.06em;
+  }
+}
+
