@@ -10,7 +10,7 @@
    const u=new URL(v);
    if(u.protocol!=='https:'||u.username||u.password)return null;
    if(/(^|\.)(example\.(com|org|net)|invalid|localhost)$/.test(u.hostname))return null;
-   if(kind==='line'&&!/^(line\.me|lin\.ee|liff\.line\.me)$/.test(u.hostname))return null;
+   if(kind==='line'&&!/^(line\.me|page\.line\.me|lin\.ee|liff\.line\.me)$/.test(u.hostname))return null;
    return u.href;
   }catch{return null;}
  }
