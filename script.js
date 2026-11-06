@@ -56,7 +56,90 @@ for(const dialog of [lineDialog,onlineDialog,confirmDialog]){dialog.querySelecto
 document.querySelectorAll('[data-line]').forEach(b=>b.addEventListener('click',()=>openModal(lineDialog,b)));document.querySelectorAll('[data-online]').forEach(b=>b.addEventListener('click',()=>openModal(onlineDialog,b)));document.querySelector('[data-online-line]').addEventListener('click',e=>{const origin=opener;onlineDialog.close();openModal(lineDialog,origin)});
 const today=new Date();form.elements.preferredDate.min=[today.getFullYear(),String(today.getMonth()+1).padStart(2,'0'),String(today.getDate()).padStart(2,'0')].join('-');
 form.addEventListener('submit',ev=>{ev.preventDefault();const invalid=[...form.querySelectorAll('[required]')].filter(x=>!x.checkValidity());for(const x of form.querySelectorAll('[aria-invalid]'))x.removeAttribute('aria-invalid');if(invalid.length){invalid.forEach(x=>x.setAttribute('aria-invalid','true'));form.querySelector('.form-state').textContent='未入力または形式が異なる項目をご確認ください。';invalid[0].focus();return}form.querySelector('.form-state').textContent='';const fields={clinic:'ご希望院',name:'お名前',age:'ご年齢',phone:'電話番号',email:'メールアドレス',preferredDate:'ご希望日',preferredTime:'ご希望時間帯',plan:'ご興味のあるプラン',message:'ご質問・ご要望'};document.querySelector('#confirm-fields').innerHTML=Object.entries(fields).map(([k,v])=>`<div><dt>${v}</dt><dd>${safe(k==='clinic'?D.clinics.find(c=>c.id===form.elements[k].value)?.name:form.elements[k].value||'未指定')}</dd></div>`).join('');document.querySelector('#confirm-status').textContent='内容をご確認のうえ、送信してください。送信時点では予約は確定しません。';openModal(confirmDialog,form.querySelector('[type=submit]'))});
- /* =========================================    女性医療脱毛LP：予約希望のメール送信    ========================================= */  const bookingSendButton = document.querySelector('[data-send-booking]'); let bookingSending = false;  bookingSendButton.addEventListener('click', async () => {   if (bookingSending) return;    const status = document.querySelector('#confirm-status');    // 確認画面を表示してから入力内容が変わった場合も再検証   if (!form.checkValidity()) {     status.textContent = '入力内容に不備があります。戻って確認してください。';     return;   }    const data = Object.fromEntries(new FormData(form).entries());    data.privacyConsent = form.elements.privacyConsent.checked ? 'on' : '';   data.website = '';    bookingSending = true;   bookingSendButton.disabled = true;   status.textContent = '送信しています。画面を閉じずにお待ちください。';    try {     // XserverのPHPから送信トークンを取得     const tokenResponse = await fetch('send.php?mode=token', {       method: 'GET',       credentials: 'same-origin',       cache: 'no-store'     });      if (!tokenResponse.ok) {       throw new Error('送信の準備ができませんでした。');     }      const tokenResult = await tokenResponse.json();      if (!tokenResult.ok || !tokenResult.token) {       throw new Error('送信の準備ができませんでした。');     }      data.csrf_token = tokenResult.token;      // 予約希望をXserverへ送信     const response = await fetch('send.php', {       method: 'POST',       credentials: 'same-origin',       cache: 'no-store',       headers: {         'Content-Type': 'application/json'       },       body: JSON.stringify(data)     });      const result = await response.json();      if (!response.ok || !result.ok) {       throw new Error(result.message || '送信に失敗しました。');     }      status.textContent =       '予約希望を受け付けました。担当スタッフからの連絡をお待ちください。';      bookingSendButton.querySelector('b').textContent = '受付完了';     form.reset();    } catch (error) {     status.textContent =       error.message || '通信エラーが発生しました。';      // 通信エラーでは受付成否が不明な場合があるため、     // 自動で再送信しない   } finally {     bookingSending = false;     bookingSendButton.disabled = false;   } });
+ 
+/* =========================================
+   女性医療脱毛LP：予約希望のメール送信
+   ========================================= */
+
+const bookingSendButton = document.querySelector('[data-send-booking]');
+let bookingSending = false;
+
+bookingSendButton.addEventListener('click', async () => {
+  if (bookingSending) return;
+
+  const status = document.querySelector('#confirm-status');
+
+  // 入力内容を再検証
+  if (!form.checkValidity()) {
+    status.textContent = '入力内容に不備があります。戻って確認してください。';
+    return;
+  }
+
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  data.privacyConsent = form.elements.privacyConsent.checked ? 'on' : '';
+  data.website = '';
+
+  bookingSending = true;
+  bookingSendButton.disabled = true;
+  status.textContent = '送信しています。画面を閉じずにお待ちください。';
+
+  try {
+    // XserverのPHPから送信トークンを取得
+    const tokenResponse = await fetch('send.php?mode=token', {
+      method: 'GET',
+      credentials: 'same-origin',
+      cache: 'no-store'
+    });
+
+    if (!tokenResponse.ok) {
+      throw new Error('送信の準備ができませんでした。');
+    }
+
+    const tokenResult = await tokenResponse.json();
+
+    if (!tokenResult.ok || !tokenResult.token) {
+      throw new Error('送信の準備ができませんでした。');
+    }
+
+    data.csrf_token = tokenResult.token;
+
+    // 予約希望をXserverへ送信
+    const response = await fetch('send.php', {
+      method: 'POST',
+      credentials: 'same-origin',
+      cache: 'no-store',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.ok) {
+      throw new Error(result.message || '送信に失敗しました。');
+    }
+
+    status.textContent =
+      '予約希望を受け付けました。担当スタッフからの連絡をお待ちください。';
+
+    bookingSendButton.querySelector('b').textContent = '受付完了';
+    form.reset();
+
+  } catch (error) {
+    status.textContent =
+      error.message || '通信エラーが発生しました。';
+
+    // 通信エラーでは受付成否が不明な場合があるため、
+    // 自動で再送信しない
+
+  } finally {
+    bookingSending = false;
+    bookingSendButton.disabled = false;
+  }
+});
+
 function bindImageErrors(scope=document){scope.querySelectorAll('.photo-window img,.clinic-gallery img,.clinic-actual img').forEach(img=>{const fail=()=>{img.hidden=true;const p=img.parentElement;if(!p.querySelector('.image-missing'))p.insertAdjacentHTML('beforeend','<p class="image-missing">画像の読み込みを確認してください。<br>'+safe(img.alt)+'</p>')};img.addEventListener('error',fail);if(img.complete&&!img.naturalWidth)fail()})}bindImageErrors();
 if(window.parent!==window)window.addEventListener('message',ev=>{if(ev.source!==window.parent)return;const ids=['top',...D.sourceOrder];if(ev.data?.type==='series-section'&&ids.includes(ev.data.id))document.getElementById(ev.data.id)?.scrollIntoView({behavior:'instant'})});
 
