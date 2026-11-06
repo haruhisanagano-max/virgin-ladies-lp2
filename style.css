@@ -1285,3 +1285,75 @@ body { background: #ece6e7; color: var(--ink); }
   min-width: 0;
   max-width: 100%;
 }
+
+
+/* =========================================
+   応募フォーム：入力欄・選択欄のサイズ統一
+   ========================================= */
+
+/* テキスト・メール・電話・日付・プルダウン */
+.reservation #booking-form input:not([type="checkbox"]),
+.reservation #booking-form select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px;
+
+  padding: 0 13px !important;
+  margin-top: 8px;
+
+  box-sizing: border-box;
+  border: 1px solid #d6c8df;
+  border-radius: 6px;
+
+  background-color: #fffafd;
+  color: #5a4b68;
+
+  font-size: 14px;
+  font-family: inherit;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+/* iPhone Safariの日付表示の調整 */
+.reservation #booking-form input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+}
+
+/* プルダウンの高さ・文字位置調整 */
+.reservation #booking-form select {
+  padding-right: 32px !important;
+}
+
+/* ご質問・ご要望欄だけは大きく維持 */
+.reservation #booking-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  height: auto;
+  min-height: 115px;
+  padding: 13px;
+
+  box-sizing: border-box;
+  border: 1px solid #d6c8df;
+  border-radius: 6px;
+
+  background-color: #fffafd;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 親要素で幅が押し広げられないように */
+.reservation #booking-form label,
+.reservation #booking-form .form-two {
+  min-width: 0;
+}
+
