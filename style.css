@@ -1148,5 +1148,21 @@ body { background: #ece6e7; color: var(--ink); }
     font-size: 18px;
     letter-spacing: -0.06em;
   }
+
+
+  
+/* iPhone Safari：縦書き「素肌へ」の文字表示修正 */
+.skin-manifesto strong {
+  background: none !important;
+  background-image: none !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
+
+  -webkit-text-fill-color: #8b719b !important;
+  color: #8b719b !important;
+
+  text-shadow: none;
+}
+
 }
 
