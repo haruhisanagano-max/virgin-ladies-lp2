@@ -1166,3 +1166,67 @@ body { background: #ece6e7; color: var(--ink); }
 
 }
 
+
+/* =========================================
+   iPhone Safari 縦書き表示の安定化
+   2つの文字を別々に配置する
+   ========================================= */
+
+.skin-manifesto > p.skin-copy-first {
+  position: absolute;
+  left: 53px;
+  right: auto;
+  top: 35px;
+
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+
+  width: auto;
+  height: auto;
+  margin: 0;
+  white-space: nowrap;
+
+  font-size: 23px;
+  line-height: 1.4;
+  color: #4c6d73;
+  z-index: 5;
+}
+
+.skin-manifesto > p.skin-copy-second {
+  position: absolute;
+  left: 6px;
+  right: auto;
+  top: 90px;
+
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+
+  width: auto;
+  height: auto;
+  margin: 0;
+  white-space: nowrap;
+
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  /* Safariで透明にならないよう単色指定 */
+  background: none;
+  -webkit-text-fill-color: #8b719b;
+  color: #8b719b;
+
+  z-index: 6;
+}
+
+/* iPhone SEなど狭い画面 */
+@media (max-width: 375px) {
+  .skin-manifesto > p.skin-copy-first {
+    left: 48px;
+    font-size: 21px;
+  }
+
+  .skin-manifesto > p.skin-copy-second {
+    left: 5px;
+    font-size: 32px;
+  }
+}
