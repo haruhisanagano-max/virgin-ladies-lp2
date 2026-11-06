@@ -1102,29 +1102,8 @@ body { background: #ece6e7; color: var(--ink); }
 }
 
 /* =========================================
-   スマホ表示の文字欠け・改行修正
+   キャンペーン見出しの折り返し防止
    ========================================= */
-
-/* ① 縦書き「自信のある、素肌へ」 */
-.skin-manifesto > p {
-  position: absolute;
-  left: 108px;
-  right: auto;
-  top: 30px;
-
-  writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-
-  width: max-content;
-  max-width: none;
-  height: auto;
-
-  white-space: nowrap;
-  overflow: visible;
-  z-index: 3;
-}
-
-/* ② キャンペーン見出しの折り返し防止 */
 #campaign .headline > strong {
   white-space: nowrap;
   text-wrap: nowrap;
@@ -1132,52 +1111,21 @@ body { background: #ece6e7; color: var(--ink); }
   letter-spacing: -0.04em;
 }
 
-/* ③ iPhone SEなど幅375px以下 */
-@media (max-width: 375px) {
-  .skin-manifesto > p {
-    left: 100px;
-    top: 25px;
-    font-size: 22px;
-  }
-
-  .skin-manifesto strong {
-    font-size: 36px;
-  }
-
-  #campaign .headline > strong {
-    font-size: 18px;
-    letter-spacing: -0.06em;
-  }
-
-
-  
-/* iPhone Safari：縦書き「素肌へ」の文字表示修正 */
-.skin-manifesto strong {
-  background: none !important;
-  background-image: none !important;
-  background-clip: border-box !important;
-  -webkit-background-clip: border-box !important;
-
-  -webkit-text-fill-color: #8b719b !important;
-  color: #8b719b !important;
-
-  text-shadow: none;
-}
-
-}
-
-
 /* =========================================
-   素肌へ：元のデザインに近づける
+   「自信のある、素肌へ」
+   Safari対応・元のデザインに近い配置
    ========================================= */
 
+/* 自信のある、 */
 .skin-manifesto > p.skin-copy-first {
   position: absolute;
   left: 98px;
-  top: 35px;
   right: auto;
+  top: 35px;
 
   writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+
   width: auto;
   height: auto;
   margin: 0;
@@ -1189,13 +1137,16 @@ body { background: #ece6e7; color: var(--ink); }
   z-index: 5;
 }
 
+/* 素肌へ */
 .skin-manifesto > p.skin-copy-second {
   position: absolute;
   left: 48px;
-  top: 47px;
   right: auto;
+  top: 47px;
 
   writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+
   width: auto;
   height: auto;
   margin: 0;
@@ -1206,6 +1157,10 @@ body { background: #ece6e7; color: var(--ink); }
   line-height: 1.2;
   letter-spacing: .04em;
 
+  /* 単色をフォールバックとして指定 */
+  color: #8b719b;
+
+  /* 元のグラデーション表現 */
   background: linear-gradient(
     180deg,
     #709a9c 0%,
@@ -1219,7 +1174,9 @@ body { background: #ece6e7; color: var(--ink); }
   z-index: 6;
 }
 
-/* iPhone SEなど狭い画面でも位置を維持 */
+/* =========================================
+   iPhone SEなど幅375px以下
+   ========================================= */
 @media (max-width: 375px) {
   .skin-manifesto > p.skin-copy-first {
     left: 89px;
@@ -1232,4 +1189,10 @@ body { background: #ece6e7; color: var(--ink); }
     top: 47px;
     font-size: 38px;
   }
+
+  #campaign .headline > strong {
+    font-size: 18px;
+    letter-spacing: -0.06em;
+  }
 }
+
