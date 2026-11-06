@@ -9,7 +9,7 @@ window.CONTENT = {
   "brand": {
     "name": "ヴァージンクリニック",
     "wordmark": "VIRGIN CLINIC",
-    "logo": "assets/images/asset-001.svg"
+    "logo": "assets/images/virgin-logo.png"
   },
   "images": {
     "hero": "assets/images/top-campaign.jpg",
