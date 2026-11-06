@@ -53,7 +53,7 @@ window.CONTENT = {
   "campaign": {
     "sectionBgImage": "",
     "topLabel": "SPECIAL OFFER",
-    "subtitle": "最高峰マシン「ジェントルマックスプロ」による全身脱毛。今だけの特別価格です。",
+    "subtitle": "ジェントルマックスプロによる医療脱毛。今だけの特別価格です。",
     "timer": {
       "month": "",
       "days": 3,
@@ -63,41 +63,41 @@ window.CONTENT = {
     },
     "plans": [
       {
-        "name": "全身医療脱毛 5回コース（+1回）",
+        "name": "全身医療脱毛 5回コース",
         "originalPrice": "223,300",
-        "campaignPrice": "132,000",
+        "campaignPrice": "88,000",
         "taxLabel": "（税込）",
-        "discountBadge": "実質約40%OFF",
+        "discountBadge": "60%OFF",
         "discountAmount": "91,330円引き",
         "features": [
-          "麻酔代が契約回数分0円",
-          "契約コースにプラス１回プレゼント",
-          "全身５回コース以上が20%OFF"
+          "エリア最安値に挑戦中",
+          
+          "全身５回コース以上が60%OFF"
         ]
       },
       {
-        "name": "全身＋VIO脱毛プラン　5回コース（+1回）",
+        "name": "全身＋VIO脱毛プラン　5回コース",
         "originalPrice": "296,450",
-        "campaignPrice": "179,520",
+        "campaignPrice": "126,500",
         "taxLabel": "（税込）",
-        "discountBadge": "実質約40%OFF",
+        "discountBadge": "57%OFF",
         "discountAmount": "44,880円引き"
       },
       {
-        "name": "全身パーフェクト脱毛プラン 5回コース（+1回）",
+        "name": "全身パーフェクト脱毛プラン 5回コース",
         "originalPrice": "365,200",
-        "campaignPrice": "227,920",
+        "campaignPrice": "165,000",
         "taxLabel": "（税込）",
-        "discountBadge": "実質約40%OFF",
+        "discountBadge": "55%OFF",
         "discountAmount": "56,980円引き"
       }
     ],
     "limit": {
-      "fullText": "特別キャンペーン価格"
+      "fullText": "新規特別キャンペーン"
     },
     "buttonText": "今すぐこの価格で予約する",
     "notes": [
-      "ヴァージンクリニックでのご契約が初めての方限定の特別プランです。",
+      "ヴァージンクリニックでの医療脱毛のご契約が初めての方限定の特別プランです。",
       "他の割引キャンペーン、紹介特典等との併用はできません。",
       "お肌の状態や体質によっては、当日施術を受けられない場合がございます。"
     ]
@@ -266,7 +266,7 @@ window.CONTENT = {
         ]
       }
     ],
-    "note": "元LPに掲載された評価値です。集計日・掲載根拠・現行値は未確認です。"
+  
   },
   "machine": {
     "heading": [
@@ -813,10 +813,10 @@ window.CONTENT = {
     "faq",
     "reservation"
   ],
-  "confirmationNote": "元LP原稿を保持した確認用表示です。医療効果・比較・数値・提供条件の根拠は未確認です。",
+  "confirmationNote": "簡単なアンケート等にご協力いただく場合がございます。また、キャンペーン内容は一部変更となる場合がございます。",
   "editorial": {
     "conditions": [
-      "初めてのご契約に",
+      "医療脱毛の初めてのご契約に",
       "他の割引と併用不可",
       "施術前に肌状態を確認"
     ],
