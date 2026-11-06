@@ -1196,3 +1196,39 @@ body { background: #ece6e7; color: var(--ink); }
   }
 }
 
+
+/* =========================================
+   脱毛経過 3ステップの縦並び修正
+   ========================================= */
+
+.progress-runway {
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+}
+
+.progress-runway > .progress-spread {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-bottom: 27px;
+}
+
+.progress-runway .progress-position {
+  display: flex;
+  align-items: center;
+}
+
+.progress-runway .progress-spread > figure {
+  width: auto;
+  max-width: 100%;
+}
+
+.progress-runway .progress-spread figcaption h3,
+.progress-runway .progress-copy > p {
+  writing-mode: horizontal-tb;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
