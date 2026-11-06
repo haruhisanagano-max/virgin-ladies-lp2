@@ -1168,19 +1168,16 @@ body { background: #ece6e7; color: var(--ink); }
 
 
 /* =========================================
-   iPhone Safari 縦書き表示の安定化
-   2つの文字を別々に配置する
+   素肌へ：元のデザインに近づける
    ========================================= */
 
 .skin-manifesto > p.skin-copy-first {
   position: absolute;
-  left: 53px;
-  right: auto;
+  left: 98px;
   top: 35px;
+  right: auto;
 
   writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-
   width: auto;
   height: auto;
   margin: 0;
@@ -1194,39 +1191,45 @@ body { background: #ece6e7; color: var(--ink); }
 
 .skin-manifesto > p.skin-copy-second {
   position: absolute;
-  left: 6px;
+  left: 48px;
+  top: 47px;
   right: auto;
-  top: 90px;
 
   writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-
   width: auto;
   height: auto;
   margin: 0;
   white-space: nowrap;
 
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 600;
   line-height: 1.2;
+  letter-spacing: .04em;
 
-  /* Safariで透明にならないよう単色指定 */
-  background: none;
-  -webkit-text-fill-color: #8b719b;
-  color: #8b719b;
+  background: linear-gradient(
+    180deg,
+    #709a9c 0%,
+    #9c7aa8 70%,
+    #b689a7 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   z-index: 6;
 }
 
-/* iPhone SEなど狭い画面 */
+/* iPhone SEなど狭い画面でも位置を維持 */
 @media (max-width: 375px) {
   .skin-manifesto > p.skin-copy-first {
-    left: 48px;
+    left: 89px;
+    top: 35px;
     font-size: 21px;
   }
 
   .skin-manifesto > p.skin-copy-second {
-    left: 5px;
-    font-size: 32px;
+    left: 43px;
+    top: 47px;
+    font-size: 38px;
   }
 }
