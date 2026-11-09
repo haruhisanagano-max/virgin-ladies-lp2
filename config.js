@@ -64,32 +64,32 @@ window.CONTENT = {
     "plans": [
       {
         "name": "全身医療脱毛 5回コース",
-        "originalPrice": "223,300",
+        "originalPrice": "165,000",
         "campaignPrice": "88,000",
         "taxLabel": "（税込）",
-        "discountBadge": "60%OFF",
-        "discountAmount": "91,330円引き",
+        "discountBadge": "約47%OFF",
+        "discountAmount": "77,000円引き",
         "features": [
           "エリア最安値に挑戦中",
           
-          "全身５回コース以上が60%OFF"
+          "全身５回コース以上が40%OFF"
         ]
       },
       {
         "name": "全身＋VIO脱毛プラン　5回コース",
-        "originalPrice": "296,450",
+        "originalPrice": "224,400",
         "campaignPrice": "126,500",
         "taxLabel": "（税込）",
-        "discountBadge": "57%OFF",
-        "discountAmount": "44,880円引き"
+        "discountBadge": "約44%OFF",
+        "discountAmount": "97,900円引き"
       },
       {
         "name": "全身パーフェクト脱毛プラン 5回コース",
-        "originalPrice": "365,200",
+        "originalPrice": "284,900",
         "campaignPrice": "165,000",
         "taxLabel": "（税込）",
-        "discountBadge": "55%OFF",
-        "discountAmount": "56,980円引き"
+        "discountBadge": "約42%OFF",
+        "discountAmount": "119,900円引き"
       }
     ],
     "limit": {
@@ -456,7 +456,7 @@ window.CONTENT = {
         "subtitle": "顔・VIO・首（前面）除く",
         "popularBadge": "人気No.1",
         "sessions": "5回コース",
-        "originalPrice": "223,300",
+        "originalPrice": "165,000",
         "campaignPrice": "88,000",
         "taxLabel": "（税込）",
         "monthlyPrice": "18,700",
@@ -471,8 +471,8 @@ window.CONTENT = {
       {
         "name": "全身+VIO脱毛プラン",
         "subtitle": "首（前面）除く",
-        "sessions": "５回コース",
-        "originalPrice": "296,450",
+        "sessions": "5回コース",
+        "originalPrice": "224,400",
         "campaignPrice": "126,500",
         "taxLabel": "（税込）",
         "monthlyPrice": "26,400",
@@ -489,7 +489,7 @@ window.CONTENT = {
         "name": "全身パーフェクト脱毛",
         "subtitle": "顔・VIO含む全部位/首（前面）除く",
         "sessions": "5回コース",
-        "originalPrice": "365,200",
+        "originalPrice": "284,900",
         "campaignPrice": "165,000",
         "taxLabel": "（税込）",
         "monthlyPrice": "35,200",
