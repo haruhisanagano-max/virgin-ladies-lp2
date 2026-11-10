@@ -37,6 +37,56 @@ document.querySelector('#page').innerHTML=`
 <section id="flow" class="flow"><span class="ambient-art ambient-tides" aria-hidden="true"></span><div class="flow-heading section-pad">${heading(D.flow.heading)}</div><div class="section-pad"><ol class="flow-story">${D.flow.steps.map(x=>`<li><span class="flow-icon"><b>${safe(x.number.padStart(2,'0'))}</b></span><h3>${safe(x.title)}</h3><p>${safe(x.description)}</p></li>`).join('')}</ol></div></section>
 <section id="faq" class="faq"><div class="section-pad"><div class="faq-head">${heading(D.faq.heading)}<span aria-hidden="true">Q</span></div>${D.faq.items.map((v,i)=>`<details class="question-item"><summary class="question"><span>Q<small>${String(i+1).padStart(2,'0')}</small></span><h3>${safe(v.question)}</h3><span class="faq-toggle" aria-hidden="true"></span></summary><div class="answer"><span>A</span><p>${safe(v.answer)}</p></div></details>`).join('')}</div></section>
 <section id="reservation" class="reservation"><div class="section-pad">${heading(D.form.heading)}<p class="booking-lead">ご入力いただいた個人情報は、カウンセリング予約のご連絡および当院からの案内のみに使用します。第三者への提供は一切行いません。</p><form id="booking-form" novalidate><fieldset><legend>無料カウンセリング予約フォーム</legend><label>ご希望の医院<select name="clinic" required><option value="">院を選択してください</option>${D.clinics.map(c=>`<option value="${c.id}">${safe(c.name)}</option>`).join('')}</select></label><label>お名前<input name="name" type="text" autocomplete="name" required maxlength="80" placeholder="お名前"></label><label>ご年齢<select name="age" required><option value="">年齢を選択してください</option>${D.form.ageOptions.map(s=>`<option>${safe(s)}</option>`).join('')}</select></label><div class="form-two"><label>電話番号<input name="phone" type="tel" autocomplete="tel" required maxlength="24" placeholder="090-0000-0000"></label><label>メールアドレス<input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="mail@example.com"></label></div><label>ご希望日<input name="preferredDate" type="date" required></label><label>ご希望時間帯<select name="preferredTime" required><option value="">選択してください</option>${D.form.timeOptions.map(s=>`<option>${safe(s)}</option>`).join('')}</select></label><label>ご興味のあるプラン<select name="plan"><option value="">プランを選択してください</option>${D.form.planOptions.map(s=>`<option>${safe(s)}</option>`).join('')}</select></label><label>ご質問・ご要望<textarea name="message" rows="3" maxlength="2000" placeholder="ご質問・ご要望"></textarea></label><label class="privacy-confirm"><input type="checkbox" name="privacyConsent" required>個人情報の取扱いを確認しました。</label><button class="button-primary" type="submit"><span><small></small><b>入力内容を確認する</b></span>${arrow}</button><p class="fine form-state" role="status"></p></fieldset></form></div></section>
+
+<!-- 医療レーザー脱毛に関する注意事項 -->
+<section class="medical-disclosure" aria-labelledby="medical-disclosure-title">
+  <div class="medical-disclosure-box">
+
+    <h2 id="medical-disclosure-title">
+      医療レーザー脱毛（自由診療）に関するご案内
+    </h2>
+
+    <div class="medical-disclosure-item">
+      <h3>治療内容</h3>
+      <p>
+        医療用レーザーを照射し、毛根組織を破壊することで長期的な減毛・脱毛を行う施術です。
+        当院では厚生労働省承認機器（ジェントルマックスプロ）を使用しています。
+        ※保険適用外の自由診療となります。
+      </p>
+    </div>
+
+    <div class="medical-disclosure-item">
+      <h3>標準的な回数・期間の目安</h3>
+      <p>
+        5回〜8回程度（期間：約1年〜1年半）
+        <br>※効果や必要な回数、期間には個人差があります。
+      </p>
+    </div>
+
+    <div class="medical-disclosure-item">
+      <h3>費用の目安</h3>
+      <p>
+       ご希望の部位や回数により異なります。
+       <br>ページ内の「料金表」にて各プランの標準的な費用を明記しておりますので、そちらをご参照ください。
+       
+      </p>
+    </div>
+
+    <div class="medical-disclosure-item">
+      <h3>主なリスク・副作用について</h3>
+      <p>
+        ・レーザー照射により、一時的な発赤（赤み）、熱感、ヒリヒリ感が生じる場合があります。
+        <br>・肌質や部位により、毛嚢炎（ニキビのような症状）、一時的な色素沈着、軽度のやけど（熱傷）が生じる可能性があります。
+        <br>・稀に、レーザーの刺激によりかえって毛が太く・濃くなること（増毛化・硬毛化）があります。
+      </p>
+      <p>
+        ※施術後に肌トラブルが生じた場合は、速やかに医師が診察し、お薬の処方など適切な処置を行います。
+      </p>
+    </div>
+
+  </div>
+</section>
+
 <footer><a class="wordmark" href="#top">${brand()}</a><p class="footer-warning">${safe(D.site.notice)}</p><nav aria-label="フッターナビゲーション"><a href="#machine">機器について</a><a href="#pricing">料金</a><a href="#clinic">医院案内</a><a href="#faq">よくあるご質問</a></nav><small class="copyright">© VIRGIN CLINIC</small></footer>
 <div class="fixed-invite"><button type="button" data-line>LINE相談<small>ご希望の院へ</small></button><button type="button" data-to-reservation><small>全身脱毛 ¥${safe(D.hero.price)}（税込）※都度払いもキャンペーン価格適応</small><b>カウンセリング予約 ${arrow}</b></button></div>
 <dialog id="line-dialog" aria-labelledby="line-title" aria-describedby="line-description"><div class="line-modal-head"><p>ヴァージンクリニック</p><button type="button" class="dialog-close"><span class="close-lines" aria-hidden="true"></span>閉じる</button></div><h2 id="line-title"><span>ご希望の院を</span><span>お選びください。</span></h2><p id="line-description">各院の公式LINEからご相談いただけます。</p><div class="line-clinic-list">${D.clinics.map((c,i)=>`<article><div class="line-clinic-name"><span>${String(i+1).padStart(2,'0')}</span><h3>${safe(c.name)}</h3></div><a class="clinic-action" href="${safe(window.LP_LINKS.resolve(c.lineUrl,'line'))}" target="_blank" rel="noopener noreferrer"><span>LINEで相談する<small>${safe(c.name)}</small></span>${arrow}</a></article>`).join('')}</div></dialog>
