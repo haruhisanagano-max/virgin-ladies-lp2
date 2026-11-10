@@ -168,7 +168,7 @@ window.CONTENT = {
       },
       {
         "session": "5回目〜",
-        "title": "一生モノ、ツルスベ肌が完成。",
+        "title": "ツルスベ肌へ。",
         "description": "自己処理で肌を痛めることがなくなるので、肌本来のなめらかさが戻ってきます。お手入れの手間から解放されることで、毎朝の準備や着替えの時間が、もっと楽で自由なものに変わります。※効果には個人差があります。適切な回数はカウンセリングにてご提案いたします。",
         "image": "assets/images/skin-stage-3.png"
       }
@@ -270,11 +270,11 @@ window.CONTENT = {
   },
   "machine": {
     "heading": [
-      "熱破壊式の最高峰で、",
-      "確実な実感を。"
+      "大人気の熱破壊式で、",
+      "効果の実感を。"
     ],
     "name": "ジェントルマックスプロ",
-    "badge": "最高位機種導入",
+    "badge": "全台ジェントルマックスプロ導入",
     "waves": [
       {
         "name": "アレキサンドライト レーザー",
@@ -284,7 +284,7 @@ window.CONTENT = {
         "points": [
           "濃い太い毛に強い",
           "美肌・毛穴改善",
-          "国内導入数No.1"
+          "実績ある国内導入数"
         ]
       },
       {
@@ -560,7 +560,7 @@ window.CONTENT = {
   "reasons": [
     {
       "title": "全台ジェントルマックスプロ",
-      "desc": "最高位の脱毛器で最高の効果を実感",
+      "desc": "人気の脱毛器で納得の効果を実感",
       "image": "assets/images/machine-real.png",
       "illustration": "assets/images/reason-machine.png"
     },
