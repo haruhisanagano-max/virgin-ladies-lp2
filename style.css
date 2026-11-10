@@ -1497,3 +1497,12 @@ body { background: #ece6e7; color: var(--ink); }
   font-size: 10px;
   white-space: nowrap;
 }
+
+
+/* 予約フォーム：プライバシーポリシーリンク */
+.privacy-confirm a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #b9aabb;
+}
