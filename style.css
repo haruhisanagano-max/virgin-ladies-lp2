@@ -1419,3 +1419,10 @@ body { background: #ece6e7; color: var(--ink); }
   margin-top: 8px;
 }
 
+/* =====================================
+   マシーン説明 03 のみ非表示
+   ===================================== */
+
+#machine .feature-spread.feature-2 {
+  display: none !important;
+}
