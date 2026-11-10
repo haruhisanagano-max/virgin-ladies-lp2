@@ -1357,3 +1357,65 @@ body { background: #ece6e7; color: var(--ink); }
   min-width: 0;
 }
 
+
+/* ======================================
+   医療レーザー脱毛 注意事項
+   ====================================== */
+
+.medical-disclosure {
+  background: #f7f1fa;
+  padding: 8px 20px 30px;
+}
+
+.medical-disclosure-box {
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid #e5d9e8;
+  border-radius: 8px;
+  padding: 20px 17px;
+  color: #706975;
+}
+
+.medical-disclosure-box h2 {
+  margin: 0 0 17px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e9e0eb;
+  color: #655b6b;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+.medical-disclosure-item {
+  margin-top: 16px;
+}
+
+.medical-disclosure-item:first-of-type {
+  margin-top: 0;
+}
+
+.medical-disclosure-item h3 {
+  margin: 0 0 5px;
+  color: #6b5e72;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.medical-disclosure-item p {
+  margin: 0;
+  color: #77717b;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+  overflow-wrap: anywhere;
+}
+
+.medical-disclosure-item p + p {
+  margin-top: 8px;
+}
+
