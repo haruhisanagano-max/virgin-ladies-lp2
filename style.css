@@ -1426,3 +1426,74 @@ body { background: #ece6e7; color: var(--ink); }
 #machine .feature-spread.feature-2 {
   display: none !important;
 }
+
+
+
+/* =========================================
+   素肌セクション：3つの特徴表示を調整
+   ========================================= */
+
+/* 3列の横幅と余白 */
+.source-stats {
+  grid-template-columns: 1.2fr 1fr 0.9fr;
+  gap: 8px;
+}
+
+/* 3つの項目を中央揃え */
+.source-stats > div:nth-child(-n+3) {
+  min-width: 0;
+  text-align: center;
+}
+
+/* 既存の数値向け横並び指定を調整 */
+.source-stats > div:nth-child(-n+3) > p {
+  display: block;
+  margin: 6px 0 0;
+}
+
+/* 共通の小見出し */
+.source-stats > div:nth-child(-n+3) > small {
+  display: block;
+  font-size: 9px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* 1列目：女性看護師対応 */
+.source-stats > div:nth-child(1) b {
+  display: block;
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+/* 2列目：完全個室 */
+.source-stats > div:nth-child(2) b {
+  display: block;
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* 3列目：5〜8回 */
+.source-stats > div:nth-child(3) b {
+  display: inline;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.source-stats > div:nth-child(3) span {
+  display: inline;
+  margin-left: 2px;
+  font-size: 10px;
+  white-space: nowrap;
+}
