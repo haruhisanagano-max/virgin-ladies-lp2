@@ -67,7 +67,7 @@ window.CONTENT = {
         "originalPrice": "165,000",
         "campaignPrice": "88,000",
         "taxLabel": "（税込）",
-        "discountBadge": "約47%OFF",
+        "discountBadge": "特別キャンペーン価格",
         "discountAmount": "77,000円引き",
         "features": [
          
@@ -78,7 +78,7 @@ window.CONTENT = {
         "originalPrice": "224,400",
         "campaignPrice": "126,500",
         "taxLabel": "（税込）",
-        "discountBadge": "約44%OFF",
+        "discountBadge": "特別キャンペーン価格",
         "discountAmount": "97,900円引き"
       },
       {
@@ -86,7 +86,7 @@ window.CONTENT = {
         "originalPrice": "284,900",
         "campaignPrice": "165,000",
         "taxLabel": "（税込）",
-        "discountBadge": "約42%OFF",
+        "discountBadge": "特別キャンペーン価格",
         "discountAmount": "119,900円引き"
       }
     ],
