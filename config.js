@@ -456,7 +456,7 @@ window.CONTENT = {
         "sessions": "5回コース",
         "originalPrice": "165,000",
         "campaignPrice": "88,000",
-        "taxLabel": "（税込）※キャンペーン価格適応",
+        "taxLabel": "（税込）※キャンペーン価格",
         "monthlyPrice": "18,700",
         "features": [
           "両ワキ、両ヒジ上、両ヒジ下、手の指・甲",
@@ -472,7 +472,7 @@ window.CONTENT = {
         "sessions": "5回コース",
         "originalPrice": "224,400",
         "campaignPrice": "126,500",
-        "taxLabel": "（税込）※キャンペーン価格適応",
+        "taxLabel": "（税込）※キャンペーン価格",
         "monthlyPrice": "26,400",
         "features": [
           "両ワキ、両ヒジ上、両ヒジ下、手の指・甲",
@@ -489,7 +489,7 @@ window.CONTENT = {
         "sessions": "5回コース",
         "originalPrice": "284,900",
         "campaignPrice": "165,000",
-        "taxLabel": "（税込）※キャンペーン価格適応",
+        "taxLabel": "（税込）※キャンペーン価格",
         "monthlyPrice": "35,200",
         "features": [
           "額、頬、鼻、鼻下、あご",
